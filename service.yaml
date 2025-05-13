@@ -1,0 +1,720 @@
+- Quick links:
+    - Home:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/unraid.svg
+        href:  http://ip:port 
+    - Shares:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/unraid.svg
+        href:  http://ip:port 
+    - Docker:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/unraid.svg
+        href:  http://ip:port 
+    - Code Server:
+        href:  http://ip:port 
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/code.svg    
+    - Radarr:          
+        href:  http://ip:port
+        icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/radarr-icon.png
+    - Whats-up Docker:          
+        href:  http://ip:port 
+        icon: https://i.imgur.com/eIUvk2Y.png
+
+- Media:
+    - Nextcloud:
+        container: nextcloud
+        href:  http://ip:port 
+        icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nextcloud-logo.png
+        ping:  http://ip:port 
+        widget:
+          type: nextcloud
+          url:  http://ip:port
+          username: username
+          password: password
+          version: 2
+
+    - Immich:
+        container: Immich
+        href:  http://ip:port 
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/immich.png
+        ping:  http://ip:port 
+        widget:
+          type: immich
+          url:  http://ip:port 
+          key: api_token 
+          version: 2 
+    
+    - PhotoPrism:
+        container: PhotoPrism
+        href:  http://ip:port 
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/photoprism.png
+        ping:  http://ip:port
+        widget:
+          type: photoprism
+          url:  http://ip:port 
+          key: api_token 
+          version: 2       
+
+    - Plex:
+        container: plex
+        href:  http://ip:port 
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/plex.png
+        ping:  http://ip:port 
+        widgets:
+        - type: plex
+          url:  http://ip:port 
+          key: api_token 
+          enableUser: true 
+          showEpisodeNumber: true 
+          expandOneStreamToTwoRows: false 
+        - type: tautulli
+          url:  http://ip:port 
+          key: api_token 
+          enableUser: true 
+          showEpisodeNumber: true 
+          expandOneStreamToTwoRows: false 
+
+
+
+
+
+- Plex Management:
+    - Sonarr:
+        container: binhex-sonarr
+        href:  http://ip:port
+        icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/sonarr-icon.png
+        ping:  http://ip:port 
+        server: docker
+        showStats: true
+        widget:
+          type: sonarr
+          url:  http://ip:port 
+          key: api_token 
+          enableQueue: true
+
+    - Radarr:
+        container: binhex-radarr
+        href:  http://ip:port
+        icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/radarr-icon.png
+        ping:  http://ip:port
+        server: docker
+        showStats: true        
+        widget:
+          type: radarr
+          url:  http://ip:port
+          key: api_token 
+          enableQueue: true 
+
+    - Prowlarr:
+        container: binhex-sonarr
+        href:  http://ip:port 
+        icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/prowlarr-icon.png
+        ping:  http://ip:port 
+        server: docker
+        showStats: true
+        widget:
+          type: prowlarr
+          url:  http://ip:port 
+          key: api_token
+          enableQueue: true
+
+    - SABnzbd:
+        container: binhex-sabnzbd
+        href:  http://ip:port 
+        icon: https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/sabnzbd-icon.png
+        ping:  http://ip:port 
+        server: docker
+        showStats: true
+        widgets:
+        - type: sabnzbd
+          url:  http://ip:port 
+          key: api_token   
+          enableQueue: true
+        - type: radarr
+          url:  http://ip:port
+          key: api_token 
+          enableQueue: true
+          fields: [""]  
+        - type: sonarr
+          url:  http://ip:port 
+          key: api_token 
+          fields: [""] 
+          enableQueue: true  
+
+    - Plex:
+        container: plex
+        href:  http://ip:port 
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/plex.png
+        ping:  http://ip:port 
+        widgets:
+        - type: plex
+          url:  http://ip:port
+          key: api_token 
+          enableUser: true 
+          showEpisodeNumber: true 
+          expandOneStreamToTwoRows: false
+        - type: iframe    
+          src: 
+          referrerPolicy: same-origin
+          classes: h-13
+          allowScrolling: no
+ 
+    - Huntarr:
+        container: Huntarr
+        href:  http://ip:port 
+        icon: https://raw.githubusercontent.com/plexguide/Huntarr.io/main/frontend/static/logo/512.png
+        statusStyle: "dot"
+ 
+    - Profilarr:
+        container: Profilarr
+        href:  http://ip:port 
+        icon: https://raw.githubusercontent.com/Dictionarry-Hub/logo/refs/heads/main/profilarr/profilarr.png   
+        statusStyle: "dot"     
+ 
+    - Tautilli:
+        href:  http://ip:port 
+        icon: https://raw.githubusercontent.com/Tautulli/Tautulli-Unraid-Template/master/img/logo-circle.png
+        container: tautulli
+        statusStyle: "dot"
+        
+- Library:
+
+    - Movies:
+        description: Recently added
+        icon: https://cdn-icons-png.flaticon.com/512/2503/2503529.png
+        widget:
+          type: iframe
+          src: 
+          referrerPolicy: same-origin
+          classes: h-92
+          allowScrolling: no
+    - TV Shows:
+        description: Recently added
+        icon: https://cdn-icons-png.freepik.com/512/8718/8718287.png
+        widget:
+          type: iframe
+          src:
+          referrerPolicy: same-origin
+          classes: h-92
+          allowScrolling: no     
+    - Currently Watching:
+        description: Recently added
+        icon: https://cdn-icons-png.flaticon.com/512/2217/2217578.png
+        widget:
+          type: iframe
+          src: 
+          referrerPolicy: same-origin
+          classes: h-92
+          allowScrolling: no                      
+
+- Calendar:
+
+    - Monthly:
+        widget:
+          type: calendar
+          firstDayInWeek: sunday 
+          view: monthly 
+          maxEvents: 15 
+          showTime: true 
+          timezone: America/Los_Angeles
+          integrations: 
+            - type: radarr 
+              service_group: Plex Management 
+              service_name: Radarr 
+              color: teal 
+              params: 
+                unmonitored: true
+            - type: sonarr
+              service_group: Plex Management
+              service_name: Sonarr
+              color: purple
+              params:
+                unmonitored: false
+
+    - Upcoming Movies:
+        widget:
+          type: calendar
+          firstDayInWeek: monday
+          view: agenda 
+          maxEvents: 13
+          showTime: true
+          timezone: America/Vancouver 
+          integrations: 
+            - type: radarr
+              service_group: Plex Management 
+              service_name: Radarr 
+              color: teal
+              params: 
+                unmonitored: true 
+
+    - Upcoming Shows:
+        widget:
+          type: calendar
+          firstDayInWeek: monday 
+          view: agenda 
+          maxEvents: 13 
+          showTime: true 
+          timezone: America/Vancouver
+          integrations: 
+            - type: sonarr
+              service_group: Plex Management
+              service_name: Sonarr
+              color: purple
+              params:
+                unmonitored: false
+
+
+    - "":
+        widget:
+          type: iframe
+          src: 
+          referrerPolicy: same-origin
+          classes: h-82
+          allowScrolling: no 
+
+
+
+
+- Services:
+    - Pi Hole:
+        href:  http://ip:port 
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pi-hole.png
+        ping:  http://ip:port 
+        widget:
+         type: pihole
+         url:  http://ip:port 
+         key: api_token 
+
+    - Uptime:
+        container: UptimeKuma
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/uptime-kuma.png
+        href:  http://ip:port 
+        ping:  http://ip:port 
+        widget:
+         type: uptimekuma
+         url:  http://ip:port 
+         fields: ["up", "down", "uptime", "incident"]
+         slug: uptime     
+    
+    - Nginx Proxy Manager:
+        container: Nginx-Proxy-Manager-Official
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/nginx-proxy-manager.png
+        href:  http://ip:port 
+        ping:  http://ip:port 
+        widget:
+          type: npm
+          url:  http://ip:port 
+          username: username
+          password: password     
+         
+    - Home Assistant:
+        href:  http://ip:port
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/home-assistant.png
+        ping:  http://ip:port 
+        widget:
+         type: homeassistant
+         url:  http://ip:port 
+         key: api_token 
+         custom:
+           - state: 
+             label: 
+           - state: 
+             label: 
+
+    - Unifi:
+        href:  http://ip:port 
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/ubiquiti-networks.png
+        ping:  http://ip:port 
+        widget:
+         type: unifi
+         url:  http://ip:port  
+         key: api_token 
+  
+    - Unraid Cloudflare Tunnel:
+        container: Unraid-Cloudflared-Tunnel
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/cloudflare.png
+        widget:
+         type: cloudflared
+         accountid: accountid
+         tunnelid: tunnelid
+         key: api_token 
+
+    - Speedtest Tracker:
+        container: speedtest-tracker
+        icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/speedtest-tracker.png
+        href:  http://ip:port 
+        widget:
+          type: speedtest
+          url:  http://ip:port 
+
+    - Proxmox:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/proxmox-light.png
+        href:  http://ip:port 
+        widget:
+          type: proxmox
+          url:  http://ip:port 
+          username: username
+          password: password
+
+
+
+
+
+- Docker Management: 
+
+    - Docker :
+        href: http://ip:port /Docker
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/docker.png
+        ping:  http://ip:port 
+        container: PortainerCE
+        server: docker
+        showStats: true
+
+        widgets:
+         - type: portainer
+           url:  http://ip:port 
+           env: 3
+           fields: ["stopped", "total", "running"]
+           key: api_token          
+         - type: whatsupdocker
+           url:  http://ip:port    
+           fields: ["updates"]                 
+            
+    - Docker Stats:
+        widgets:
+         - type: portainer
+           url:  http://ip:port 
+           env: 4
+           fields: [""]
+           key: api_token    
+         - type: glances
+           url:  http://ip:port 
+           metric: containers
+           version: 4 
+         - type: glances
+           url:  http://ip:port 
+           metric: fs:/rootfs/var/lib/docker
+           version: 4    
+           chart: false     
+
+    - Portainer:
+        href:  http://ip:port 
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/portainer.png
+        container: portainer
+        server: pidocker
+        showStats: true
+        ping:  http://ip:port 
+        widgets:
+         - type: portainer
+           url:  http://ip:port 
+           env: 4
+           fields: ["stopped", "total", "running"]
+           key: api_token    
+         - type: whatsupdocker
+           url:  http://ip:port       
+           fields: ["updates"]     
+
+    - Portainer Stats:
+        widgets:
+         - type: portainer
+           url:  http://ip:port 
+           env: 4
+           fields: [""]
+           key: api_token     
+         - type: glances
+           url:  http://ip:port 
+           metric: containers
+           version: 4 
+         - type: glances
+           url:  http://ip:port 
+           metric: fs:/etc/hosts
+           version: 4    
+           chart: false  
+
+
+
+
+
+- Containers:
+    
+    - Vaultwarden:
+        href:  http://ip:port
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/bitwarden.png
+        container: vaultwarden
+        server: pidocker
+        statusStyle: "dot"
+        
+    - Code Server:
+        href:  http://ip:port 
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/code.png 
+        container: binhex-code-server
+        statusStyle: "dot"
+
+    - Bookstack:
+        href:  http://ip:port 
+        icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/bookstack-logo.png
+        container: bookstack
+        statusStyle: "dot"        
+
+    - Stirling PDF:
+        href:  http://ip:port
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/stirling-pdf.png
+        container: StirlingPDF
+        statusStyle: "dot"
+
+    - Paperless:
+        container: paperless-ngx
+        href:  http://ip:port 
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/paperless.png
+        statusStyle: "dot"
+        widget:   
+ 
+    - Paperless AI:
+        href:  http://ip:port 
+        icon: https://raw.githubusercontent.com/nwithan8/unraid_templates/master/images/paperless-ai-icon.png
+        container: Paperless-AI
+        statusStyle: "dot"
+
+
+    - Pinchflat:
+        href:  http://ip:port 
+        icon: https://raw.githubusercontent.com/kieraneglin/unraid_ca/master/images/pinchflat_icon.png
+        container: Pinchflat
+        statusStyle: "dot"
+
+
+    - Quickdrop:
+        href:  http://ip:port 
+        icon: https://github.com/undead-reaper/unraid-templates/blob/master/quickdrop/quickdrop.png?raw=1
+        container: Quickdrop
+        statusStyle: "dot"
+
+    
+    - Homepage:
+        href:  http://ip:port 
+        icon: https://raw.githubusercontent.com/gethomepage/homepage/main/public/android-chrome-512x512.png
+        container: homepage
+        statusStyle: "dot"
+
+
+    - Draw:
+        href:  http://ip:port
+        icon: https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/draw-io.png
+        container: Draw.io
+        statusStyle: "dot"  
+
+    - AdGuard:
+        href:  http://ip:port      
+        container: AdGuard-Home
+        icon: https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/adguard.png
+        statusStyle: "dot"      
+
+
+
+
+
+- Databases:
+
+    - MariaDB:
+        icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/mariadb-logo.png
+        container: mariadb
+
+    - Redis:
+        icon: https://raw.githubusercontent.com/juusujanar/unraid-templates/master/img/Redis-logo.png
+        container: Redis
+
+    - PostgreSQL_Immich:
+        icon: https://github.com/SpaceinvaderOne/Docker-Templates-Unraid/blob/master/spaceinvaderone/docker_icons/postgresql-immich-logo.png?raw=true
+        container: PostgreSQL_Immich  
+
+
+
+
+
+- Unraid: 
+
+     - Dashboard:
+        icon: https://static-00.iconduck.com/assets.00/unraid-icon-2048x2048-sntilyzr.png
+        href:  http://ip:port 
+        ping:  http://ip:port 
+        statusStyle: dot
+
+     - CPU Usage:
+        icon: https://cdn-icons-png.flaticon.com/512/1250/1250593.png
+        target: _self
+        widget:
+         type: glances
+         url:  http://ip:port 
+         metric: cpu
+         version: 4
+
+     - Memory:
+        icon: https://cdn-icons-png.flaticon.com/512/1689/1689137.png
+        target: _self
+        widget:
+          type: glances
+          url:  http://ip:port 
+          metric: memory
+          version: 4
+
+     - Network Usage:
+        icon: https://static.thenounproject.com/png/1271836-200.png
+        target: _self
+        widget:
+         type: glances
+         url:  http://ip:port 
+         metric: network:eth0
+         version: 4
+
+     - Containers:
+        icon: https://cdn-icons-png.flaticon.com/512/860/860105.png
+        widget:
+         type: glances
+         url:  http://ip:port 
+         metric: containers
+         version: 4
+
+     - Temperature:
+        icon: https://static.thenounproject.com/png/1979336-200.png
+        target: _self
+        widget:
+         type: glances
+         url:  http://ip:port 
+         metric: sensor:intel5500 0
+         version: 4
+
+     - Stats: 
+
+         - Storage:
+            icon: https://cdn-icons-png.flaticon.com/512/77/77649.png
+            widget:
+             type: glances
+             url:  http://ip:port 
+             metric: fs:/rootfs/mnt/disk1 
+             version: 4         
+
+         - Cache Drive:
+            icon: https://cdn-icons-png.freepik.com/512/2004/2004633.png
+            widget:
+             type: glances
+             url:  http://ip:port 
+             metric: fs:/rootfs/mnt/cache
+             version: 4           
+       
+
+- Raspberry Pi 3B:
+
+     - Dashboard:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/portainer.png
+        href:  http://ip:port 
+        ping:  http://ip:port 
+        statusStyle: dot
+
+     - CPU Usage:
+        icon: https://cdn-icons-png.flaticon.com/512/1250/1250593.png
+        widget:
+         type: glances
+         url:  http://ip:port 
+         metric: cpu
+         version: 4
+
+     - Memory:
+        icon: https://cdn-icons-png.flaticon.com/512/1689/1689137.png
+        widget:
+          type: glances
+          url:  http://ip:port 
+          metric: memory
+          version: 4
+
+     - Network Usage:
+        icon: https://static.thenounproject.com/png/1271836-200.png
+        widget:
+         type: glances
+         url:  http://ip:port 
+         metric: network:eth0
+         version: 4
+
+     - Containers:
+        icon: https://cdn-icons-png.flaticon.com/512/860/860105.png
+        widget:
+         type: glances
+         url:  http://ip:port 
+         metric: containers
+         version: 4  
+
+     - Temperature:
+        icon: https://static.thenounproject.com/png/1979336-200.png
+        target: _self
+        widget:
+         type: glances
+         url:  http://ip:port 
+         metric: sensor:cpu_thermal 0
+         version: 4
+
+     - Storage:
+        icon: https://cdn-icons-png.flaticon.com/512/77/77649.png
+        widget:
+         type: glances
+         url:  http://ip:port 
+         metric: fs:/etc/hosts
+         version: 4         
+
+- Intel NUC:
+
+     - Dashboard:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pi-hole.png
+        href:  http://ip:port /admin
+        ping:  http://ip:port /admin
+        statusStyle: dot
+
+     - CPU Usage:
+        icon: https://cdn-icons-png.flaticon.com/512/1250/1250593.png
+        target: _self
+        widget:
+         type: glances
+         url:  http://ip:port 
+         metric: cpu
+         version: 4
+
+     - Memory:
+        icon: https://cdn-icons-png.flaticon.com/512/1689/1689137.png
+        widget:
+          type: glances
+          url:  http://ip:port 
+          metric: memory
+          version: 4
+
+     - Network Usage:
+        icon: https://static.thenounproject.com/png/1271836-200.png
+        widget:
+         type: glances
+         url:  http://ip:port 
+         metric: network:eth0
+         version: 4
+     
+     - Process:
+        icon: https://png.pngtree.com/png-vector/20230228/ourmid/pngtree-process-line-icon-vector-png-image_6623871.png
+        widget:
+         type: glances
+         url:  http://ip:port 
+         metric: process
+         version: 4     
+
+     - Temperature:
+        icon: https://static.thenounproject.com/png/1979336-200.png
+        target: _self
+        widget:
+         type: glances
+         url:  http://ip:port 
+         metric: sensor:Package id 0
+         version: 4
+
+     - Storage:
+        icon: https://cdn-icons-png.flaticon.com/512/77/77649.png
+        widget:
+         type: glances
+         url:  http://ip:port 
+         metric: fs:/
+         version: 4        
+
+
+
+
