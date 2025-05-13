@@ -1,0 +1,23 @@
+.cpu-value-low {
+    display: inline-block !important;
+    padding: 0 4px !important;
+    border-radius: 3px !important;
+    color: white !important;
+    background-color: #22c55eaa !important; /* Green */
+}
+
+.cpu-value-medium {
+    display: inline-block !important;
+    padding: 0 4px !important;
+    border-radius: 3px !important;
+    color: white !important;
+    background-color: #f97316aa !important; /* Orange */
+}
+
+.cpu-value-high {
+    display: inline-block !important;
+    padding: 0 4px !important;
+    border-radius: 3px !important;
+    color: white !important;
+    background-color: #dc2626aa !important; /* Red */
+}
