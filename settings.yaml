@@ -1,0 +1,74 @@
+background: 
+  blur: sm
+  image:
+  saturate: 20 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
+  brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
+  opacity: 20 # 0-100
+
+providers:
+  openweathermap: openweathermapapikey
+  weatherapi: weatherapiapikey
+  finnhub: cvkd4a9r01qu5bro2r8gcvkd4a9r01qu5bro2r90
+
+quicklaunch:
+  searchDescriptions: true
+  hideInternetSearch: true
+  showSearchSuggestions: false
+  hideVisitURL: false
+
+headerStyle: clean
+
+useEqualHeights: true
+
+layout:
+  Quick links:
+    style: row
+    columns: 6
+  Media:
+    tab: Command Center
+    style: row
+    columns: 4
+  Plex Management:
+    tab: Media Management
+    style: row
+    columns: 5
+  Library:
+     tab: Media Management
+     style: row
+     columns: 3
+  Calendar:
+     tab: Media Management
+     style: row
+     columns: 4  
+  Posterr: 
+    tab: Media Management
+    style: row
+    header: false  
+  Services:
+    tab: Command Center
+    style: row
+    columns: 4
+  Docker Management:
+    tab: Command Center
+    style: row
+    columns: 4
+  Containers :
+    tab: Command Center
+    style: row
+    columns: 5
+  Databases :
+    tab: Command Center
+    style: row
+    columns: 5
+  Unraid:
+    tab: Command Center  
+    Stats:
+      style: row
+      columns: 2
+      header: false    
+  Raspberry Pi 3B:
+    tab: Command Center
+    style: columns     
+  Intel NUC:
+    tab: Command Center
+    style: columns
