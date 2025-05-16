@@ -8,7 +8,7 @@ background:
 providers:
   openweathermap: openweathermapapikey
   weatherapi: weatherapiapikey
-  finnhub: cvkd4a9r01qu5bro2r8gcvkd4a9r01qu5bro2r90
+  finnhub: api token
 
 quicklaunch:
   searchDescriptions: true
